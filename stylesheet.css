@@ -1,0 +1,33 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  font-size: 30px;
+  font-family: serif;
+}
+
+.centerdiv {
+	text-align: center;
+}
+
+#title{
+	text-align:center;
+	font-family: Impact;
+}
+
+#begin{
+	vertical-align:center;
+	margin-top:60%;
+}
+.left{
+	float:left;
+	position:relative;
+}
+
+.right{
+	float:right;
+	position:relative;
+}
