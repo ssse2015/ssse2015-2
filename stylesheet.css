@@ -53,3 +53,10 @@ p {
 #gohome{
 	background-color:#FF0000;
 }
+
+#pasttitle{
+	background-image: url("http://extreme.infomagic.net/static/random-bitmap.gif");
+	transition: opacity 2s;
+
+	opacity: 0;
+}
