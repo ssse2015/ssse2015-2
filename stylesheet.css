@@ -55,8 +55,60 @@ p {
 }
 
 #pasttitle{
-	background-image: url("http://extreme.infomagic.net/static/random-bitmap.gif");
+	background-image: url("Transition-Past.jpg");
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
 	transition: opacity 2s;
+	opacity: 0;
+}
 
+.transitbut{
+	margin:auto auto;
+	width: 50px;
+	height: 60px;
+	//vertical-align:center;
+	position: absolute;
+
+}
+
+#prestitle{
+	background-image: url("Transition-Present.jpg");
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	transition: opacity 2s;
+	opacity: 0;
+}
+
+#gftitle{
+	background-image: url("Transition-GoodFuture.jpg");
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	transition: opacity 2s;
+	opacity: 0;
+}
+
+#bftitle{
+	background-image: url("Transition-BadFuture.jpg");
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	transition: opacity 2s;
+	opacity: 0;
+}
+
+#choice{
+	background-image: url("Transition-Choice.jpg");
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	transition: opacity 2s;
 	opacity: 0;
 }

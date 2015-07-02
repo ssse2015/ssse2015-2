@@ -7,9 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
 	</head>
-
 	<body>
 		<div data-role="page" id="home">
 			<div data-role="header" id="title">
@@ -21,15 +19,15 @@
 					<button onclick=showPage("#pasttitle")>Tap to begin!</button>
 				</div>
 			</div>
-			
 		</div>
 		<div data-role="page" id="pasttitle">
-			
-			<button onclick=showPage("#past")>Next</button>
+			<div class="transitbut">
+				<button onclick=showPage("#past")>Next</button>
+			</div>
 		</div>
 		<div data-role="page" id="past">
 				<div class="textbox">
-					<p>PAST (Calm Before the Storm): Oyster reefs covered a vast area of New York Harbor and served as the main filters of the New York Harbor. Some biologists estimate that the New York Harbor contained half of the world's oysters.
+					<p>(PAST)Oyster reefs covered a vast area of New York Harbor and served as the main filters of the New York Harbor. Some biologists estimate that the New York Harbor contained half of the world's oysters.
  
 					One oyster could filter up to 50 gallons of water, allowing the water to be a clear as possible. Oysters natural enemies include the blue crab and snails, but their real killer is polluted water and toxic water.
 					 
@@ -38,14 +36,14 @@
 				<button onclick=showPage("#prestitle")>Next</button>
 		</div>
 		<div data-role="page" id="prestitle">
-			
-			<button onclick=showPage("#present")>Next</button>
+			<div class="transitbut">
+				<button onclick=showPage("#present")>Next</button>
+			</div>
 		</div>
 
 		<div data-role="page" id="present">
 				<div class="textbox">
-					<p>PRESENT(The Present Situation):
-					People discovered that oysters were edible, and delicious to some. Many seafood restaurants opened up and the oyster population dwindled.
+					<p>(PRESENT)People discovered that oysters were edible, and delicious to some. Many seafood restaurants opened up and the oyster population dwindled.
 					 
 					Increasing pollution and dump of waste to the Harbor also added to the problems the oysters faced. Burdened by over-harvesting, sewage pollution, and landfill, the last of the New York oyster beds was closed in 1927.
 					 
@@ -55,43 +53,50 @@
 					 
 					The Billion Oyster Project was formed in 2010 by Murray Fisher to allow oysters to return to their natural habitats and gradually restore the water to its original state. Help the Billion Oyster Project succeed!</p>
 				</div>
-				<button onclick=showPage("#bftitle")>Next</button>
+				<button onclick=showPage("#choice")>Next</button>
 		</div>
 
+		<div data-role="page" id="choice">
+			<button onclick=showPage("#gftitle")>Yes</button>
+			<button onclick=showPage("#bftitle")>No</button>
+		</div>
 		<div data-role="page" id="bftitle">
-			
-			<button onclick=showPage("#badfuture")>Next</button>
+			<div class="transitbut">
+				<button onclick=showPage("#badfuture")>Next</button>
+			</div>
 		</div>
 
 		<div data-role="page" id="badfuture">
 				<div class="textbox">
-					<p>BAD FUTURE (Fate of the Oysters): You failed to support The Billion Oyster Project, other people followed your lead and no action was taken to assist the oysters. The Billion Oyster Project has failed. The water has reached a point where nothing can be done to save it...
-					For the oysters, for the water... it was...
-					GAME OVER
-					<button onclick=showPage("#home") id="gohome">Continue?</button>
+					<p>(BAD FUTURE) You failed to support The Billion Oyster Project, other people followed your lead and no action was taken to assist the oysters. The Billion Oyster Project has failed. The water has reached a point where nothing can be done to save it...</p>
+					<p>For the oysters, for the water... it was...</p>
+					<p>GAME OVER</p>
+					<p><button onclick=showPage("#home") id="gohome">Continue?</button>
 					</p>
 				</div>
 				<button onclick=showPage("#gftitle")>Next</button>
 		</div>
 
 		<div data-role="page" id="gftitle">
-			
-			<button onclick=showPage("#goodfuture")>Next</button>
+			<div class="transitbut">
+				<button onclick=showPage("#goodfuture")>Next</button>
+			</div>
 		</div>
 
 		<div data-role="page" id="goodfuture">
 				<div class="textbox">
-					<p>GOOD FUTURE (Fate of the Oysters): You are a kind and compassionate human being. By supporting this cause, many others followed your lead in the project to save the oysters. Since the Billion Oyster Project began, many people have contributed to the project and have succeeded in restoring 1,000,000,000 oysters to the New York Harbor. The water has been restored to a condition that hasn't been seen since before the 17th century. The oyster population is flourishing all due to your contributions.
-						YOU WIN!
+					<p>(GOOD FUTURE)You are a kind and compassionate human being. By supporting this cause, many others followed your lead in the project to save the oysters. Since the Billion Oyster Project began, many people have contributed to the project and have succeeded in restoring 1,000,000,000 oysters to the New York Harbor. The water has been restored to a condition that has not been seen since before the 17th century. The oyster population is flourishing all due to your contributions.</p>
+					<p>YOU WIN!</p>
  
-					Make this a reality and visit
+					<p>Make this a reality and visit
 					<a href="www.billionoysterproject.org"class="link">www.billionoysterproject.org</a>.</p>
 				</div>
-				<button onclick=showPage("#endtitle")>Next</button>
+				<button onclick=showPage("#end")>Next</button>
 		</div>
 		<div data-role="page" id="endtitle">
-			
-			<button onclick=showPage("#end")>Next</button>
+			<div class="transitbut">
+				<button onclick=showPage("#end")>Next</button>
+			</div>
 		</div>
 
 		<div data-role="page" id="end">
@@ -109,15 +114,13 @@
 		</div>
 		<script type="text/javascript" charset="utf-8">
 
-			var pages=["#home", "#pasttitle", "#past", "#prestitle", "#present", "#gftitle", "#goodfuture", "#bftitle", "#badfuture", "#endtitle", "#end"]
+			var pages=["#home", "#pasttitle", "#past", "#prestitle", "#present", "#choice", "#gftitle", "#goodfuture", "#bftitle", "#badfuture", "#endtitle", "#end"]
 
 			showPage("#home")
 
 			$("#begin").click( function() {
 				showPage("#past");
 			})
-			
-
 			function showPage(page){
 				//List hide thing
 				for(var i = 0; i < pages.length; i++)
@@ -126,13 +129,7 @@
 				}
 				$(page).show();
 				$(page).css('opacity', 1)
-
 			}
-
-
 		</script>
 	</body>
-	
-
-
 </html>
