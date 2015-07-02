@@ -40,6 +40,12 @@
 	float:center;
 }
 
-p{
-	font-color: #000000;
+p {
+	color: white;
+	font-size: 30;
+	font-family: Verdana;
+}
+
+.link{
+	color:#FF0000;
 }

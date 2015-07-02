@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
 	</head>
 
 	<body>
@@ -21,6 +22,7 @@
 			</div>
 			
 		</div>
+		
 		<div data-role="page" id="past">
 				<div class="textbox">
 					<p>PAST (Calm Before the Storm): Oyster reefs covered a vast area of New York Harbor and served as the main filters of the New York Harbor. Some biologists estimate that the New York Harbor contained half of the world's oysters.
@@ -29,7 +31,7 @@
 					 
 					Harbor oyster shells measured up to 10 inches, and early European travellers describe the shellfish as being about a foot in length. To grow to that length, those oysters would have been 10+ years old.</p>
 				</div>
-				<button onclick="showPage("#present")">Next</button>
+				<button onclick=showPage("#present")>Next</button>
 		</div>
 
 		<div data-role="page" id="present">
@@ -39,34 +41,40 @@
 					 
 					Increasing pollution and dump of waste to the Harbor also added to the problems the oysters faced. Burdened by over-harvesting, sewage pollution, and landfill, the last of the New York oyster beds was closed in 1927.
 					 
-					The Clean Water Act of 1972, made it illegal for people to dump trash into the water without a permit. (Learn more. http://www2.epa.gov/laws-regulations/summary-clean-water-act)
+					The Clean Water Act of 1972, made it illegal for people to dump trash into the water without a permit. (<a href="http://www2.epa.gov/laws-regulations/summary-clean-water-act" class="link">Learn more.</a>)
 					 
 					Despite all the positive actions being taken to protect their habitat, the water had been so polluted that the oysters were rendered inedible. In addition to this, their population continued dropping since the water was still filthy.
 					 
 					The Billion Oyster Project was formed in 2010 by Murray Fisher to allow oysters to return to their natural habitats and gradually restore the water to its original state. Help the Billion Oyster Project succeed!</p>
 				</div>
+				<button onclick=showPage("#badfuture")>Next</button>
 		</div>
 
 		<div data-role="page" id="badfuture">
 				<div class="textbox">
-					<p>BAD FUTURE (Fate of the Oysters): You failed to support The Billion Oyster Project, other people followed your lead and no action was taken to assist the oysters. The Billion Oyster Project has failed. The water has reached a point where nothing can be done to save it…
-					For the oysters, for the water… it was…</p>
+					<p>BAD FUTURE (Fate of the Oysters): You failed to support The Billion Oyster Project, other people followed your lead and no action was taken to assist the oysters. The Billion Oyster Project has failed. The water has reached a point where nothing can be done to save it...
+					For the oysters, for the water... it was...
+					GAME OVER
+					Continue? <!--10…9…8…7…-->
+					</p>
 				</div>
+				<button onclick=showPage("#goodfuture")>Next</button>
 		</div>
 
 		<div data-role="page" id="goodfuture">
 				<div class="textbox">
-					<p></p>
+					<p>GOOD FUTURE (Fate of the Oysters): You are a kind and compassionate human being. By supporting this cause, many others followed your lead in the project to save the oysters. Since the Billion Oyster Project began, many people have contributed to the project and have succeeded in restoring 1,000,000,000 oysters to the New York Harbor. The water has been restored to a condition that hasn't been seen since before the 17th century. The oyster population is flourishing all due to your contributions.
+						YOU WIN!
+ 
+					Make this a reality and visit
+					<a href="www.billionoysterproject.org"class="link">www.billionoysterproject.org</a>.</p>
 				</div>
+				<button onclick=showPage("#end")>Next</button>
 		</div>
 
 		<div data-role="page" id="end">
 				<div class="textbox">
-					<p>GOOD FUTURE (Fate of the Oysters): You are a kind and compassionate human being. By supporting this cause, many others followed your lead in the project to save the oysters. Since the Billion Oyster Project began, many people have contributed to the project and have succeeded in restoring 1,000,000,000 oysters to the New York Harbor. The water has been restored to a condition that hasn’t been seen since before the 17th century. The oyster population is flourishing all due to your contributions.
-						YOU WIN!
- 
-					Make this a reality and visit
-					www.billionoysterproject.org</p>
+					
 				</div>
 			<footer class="footer">
       			<div class="container">
