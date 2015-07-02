@@ -29,26 +29,55 @@
     		</footer>
 		</div>
 		<div data-role="page" id="past">
-
+				<div class="textbox">
+				</div>
+				<button onclick="showPage("#present")">Next</button>
 		</div>
 
 		<div data-role="page" id="present">
-
+				<div class="textbox">
+				</div>
 		</div>
 
 		<div data-role="page" id="badfuture">
-
+				<div class="textbox">
+				</div>
 		</div>
 
 		<div data-role="page" id="goodfuture">
-
+				<div class="textbox">
+				</div>
 		</div>
 
 		<div data-role="page" id="end">
-
+				<div class="textbox">
+				</div>
 		</div>
-	</body>
+		<script type="text/javascript" charset="utf-8">
 
+			var pages=["#home", "#past", "#present", "#goodfuture", "#badfuture", "#end"]
+
+			showPage("#home")
+
+			$("#begin").click( function() {
+				showPage("#past");
+			})
+			
+
+			function showPage(page){
+				//List hide thing
+				for(var i = 0; i < pages.length; i++)
+				{
+					$(pages[i]).hide();
+				}
+				$(page).show();
+
+			}
+
+
+		</script>
+	</body>
+	
 
 
 </html>

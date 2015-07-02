@@ -31,3 +31,11 @@
 	float:right;
 	position:relative;
 }
+
+.textbox{
+	height: 200px;
+	width: 1000px;
+	background-color:blue;
+	margin-top:60%;
+	float:center;
+}

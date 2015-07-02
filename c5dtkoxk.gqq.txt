@@ -1,0 +1,13 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: unknown <SSSE2015@E6440_LEGO11.pace.edu>
+#
+# On branch master
+# Changes to be committed:
+#	new file:   etnx0pcz.tss.txt
+#	modified:   oystory.html
+#	modified:   stylesheet.css
+#
+Added javascript functions ytay
