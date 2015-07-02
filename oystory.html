@@ -22,6 +22,7 @@
 		</div>
 		<div data-role="page" id="pasttitle">
 			<div class="transitbut">
+<!-- 			       <a>Tap to Continue</a> -->
 				<button onclick=showPage("#past")>Next</button>
 			</div>
 		</div>
@@ -74,7 +75,7 @@
 					<p><button onclick=showPage("#home") id="gohome">Continue?</button>
 					</p>
 				</div>
-				<button onclick=showPage("#gftitle")>Next</button>
+				
 		</div>
 
 		<div data-role="page" id="gftitle">
@@ -100,9 +101,10 @@
 		</div>
 
 		<div data-role="page" id="end">
-				<div class="textbox">
+				<!-- <div class="textbox">
 					
-				</div>
+				</div> -->
+				<img id ="endimg" src="http://www.nyenvironmentreport.com/wp-content/uploads/2014/05/NYER5514_2-762x478.jpg"/>
 			<footer class="footer">
       			<div class="container">
 					<div data-id="navig" data-role="navbar">
@@ -118,6 +120,8 @@
 
 			showPage("#home")
 
+						
+
 			$("#begin").click( function() {
 				showPage("#past");
 			})
@@ -126,9 +130,14 @@
 				for(var i = 0; i < pages.length; i++)
 				{
 					$(pages[i]).hide();
+					$(page).css('opacity', 0)
 				}
-				$(page).show();
-				$(page).css('opacity', 1)
+
+				$(page).show(0,function(){
+					$(page).css('opacity', 1)	
+				});
+
+				
 			}
 		</script>
 	</body>

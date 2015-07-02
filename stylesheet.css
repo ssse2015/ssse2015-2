@@ -36,7 +36,7 @@
 	height: 200px;
 	width: 1000px;
 	background-color:blue;
-	margin-top:60%;
+	/*margin-top:60%;*/
 	float:center;
 }
 
@@ -54,6 +54,11 @@ p {
 	background-color:#FF0000;
 }
 
+#home {
+	float:none;
+	margin: auto;
+}
+
 #pasttitle{
 	background-image: url("Transition-Past.jpg");
 	height: 100vh;
@@ -62,15 +67,27 @@ p {
 	width: 100%;
 	transition: opacity 2s;
 	opacity: 0;
+	float:none;
+	margin: auto;
 }
 
 .transitbut{
+	/*text-align:center;
+	vertical-align:middle;
+	bottom:0px;
+	position: relative;
+	height:100%;*/
 	margin:auto auto;
 	width: 50px;
 	height: 60px;
 	//vertical-align:center;
 	position: absolute;
 
+}
+.transitbut a {
+	color:white;
+	position: absolute;
+	bottom:20px;
 }
 
 #prestitle{
@@ -111,4 +128,9 @@ p {
 	width: 100%;
 	transition: opacity 2s;
 	opacity: 0;
+}
+
+#endimg{
+	background-repeat:no-repeat;
+	width:100%;
 }
