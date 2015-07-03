@@ -8,16 +8,13 @@
   font-size: 30px;
   font-family: serif;
 }
-
 .centerdiv {
 	text-align: center;
 }
-
 #title{
 	text-align:center;
 	font-family: Impact;
 }
-
 #begin{
 	vertical-align:center;
 	margin-top:60%;
@@ -26,18 +23,18 @@
 	float:left;
 	position:relative;
 }
-
 .right{
 	float:right;
 	position:relative;
 }
-
 .textbox{
-	height: 200px;
-	width: 1000px;
-	background-color:blue;
+	height: 100%;
+	width: 100%;
+	background-color:#000000;
 	/*margin-top:60%;*/
 	float:center;
+	opacity:.6;
+
 }
 
 p {
@@ -133,4 +130,11 @@ p {
 #endimg{
 	background-repeat:no-repeat;
 	width:100%;
+}
+
+.footer{
+	opacity:.6;
+	background-color:#FFFFFF;
+	color: black;
+	position:fixed;
 }
