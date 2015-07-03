@@ -9,22 +9,12 @@
 	</head>
 	<body>
 		<div data-role="page" id="home">
-			<div data-role="header" id="title">
-				<h1>Oy-Story</h1>
-			</div>
-			<div data-role="body">
-				<div class="centerdiv">
-					<button onclick=showPage("#pasttitle")>Tap to begin!</button>
-				</div>
-			</div>
+			
 		</div>
 		<div data-role="page" id="pasttitle">
-			<div class="transitbut">
-<!-- 			       <a>Tap to Continue</a> -->
-				<button onclick=showPage("#past")>Next</button>
-			</div>
+			
 		</div>
-		<div data-role="page" id="past">
+		<div data-role="page" id="past" class="infop">
 				<div class="textbox">
 					<p>Oyster reefs covered a vast area of New York Harbor and served as the main filters of the New York Harbor. Some biologists estimate that the New York Harbor contained half of the world's oysters.
  
@@ -32,14 +22,11 @@
 					 
 					Harbor oyster shells measured up to 10 inches, and early European travellers describe the shellfish as being about a foot in length. To grow to that length, those oysters would have been 10+ years old.</p>
 				</div>
-				<button onclick=showPage("#prestitle")>Next</button>
+				
 		</div>
 		<div data-role="page" id="prestitle">
-			<div class="transitbut">
-				<button onclick=showPage("#present")>Next</button>
-			</div>
 		</div>
-		<div data-role="page" id="present">
+		<div data-role="page" id="present" class="infop">
 				<div class="textbox">
 					<p>People discovered that oysters were edible, and delicious to some. Many seafood restaurants opened up and the oyster population dwindled.
 					 
@@ -51,34 +38,33 @@
 					 
 					The Billion Oyster Project was formed in 2010 by Murray Fisher to allow oysters to return to their natural habitats and gradually restore the water to its original state. Help the Billion Oyster Project succeed!</p>
 				</div>
-				<button onclick=showPage("#choice")>Next</button>
+				
 		</div>
 		<div data-role="page" id="choice">
-			<button onclick=showPage("#gftitle")>Yes</button>
-			<button onclick=showPage("#bftitle")>No</button>
+			<div>
+				<a onclick=showPage("#gftitle") id="yes">Yes</a>
+				<a onclick=showPage("#bftitle") id="no">No</a>
+			</div>
+
 		</div>
 		<div data-role="page" id="bftitle">
-			<div class="transitbut">
-				<button onclick=showPage("#badfuture")>Next</button>
-			</div>
+			
 		</div>
-		<div data-role="page" id="badfuture">
+		<div data-role="page" id="badfuture" class="infop">
 				<div class="textbox">
 					<p>You failed to support The Billion Oyster Project, other people followed your lead and no action was taken to assist the oysters. The Billion Oyster Project has failed. The water has reached a point where nothing can be done to save it...</p>
 					<p>For the oysters, for the water... it was...</p>
 					<p>GAME OVER</p>
-					<p><button onclick=showPage("#home") id="gohome">Continue?</button>
+					<p><button onclick=showPage("#home") id="gohome">Try again?</button>
 					</p>
 				</div>
 		</div>
 
 		<div data-role="page" id="gftitle">
-			<div class="transitbut">
-				<button onclick=showPage("#goodfuture")>Next</button>
-			</div>
+			
 		</div>
 
-		<div data-role="page" id="goodfuture">
+		<div data-role="page" id="goodfuture" class="infop">
 				<div class="textbox">
 					<p>hYou are a kind and compassionate human being. By supporting this cause, many others followed your lead in the project to save the oysters. Since the Billion Oyster Project began, many people have contributed to the project and have succeeded in restoring 1,000,000,000 oysters to the New York Harbor. The water has been restored to a condition that has not been seen since before the 17th century. The oyster population is flourishing all due to your contributions.</p>
 					<p>YOU WIN!</p>
@@ -86,18 +72,14 @@
 					<p>Make this a reality and visit
 					<a href="www.billionoysterproject.org"class="link">www.billionoysterproject.org</a>.</p>
 				</div>
-				<button onclick=showPage("#end")>Next</button>
+				
 		</div>
 		<div data-role="page" id="endtitle">
-			<div class="transitbut">
-				<button onclick=showPage("#end")>Next</button>
-			</div>
+			
 		</div>
 
 		<div data-role="page" id="end">
-				<!-- <div class="textbox">
-					
-				</div> -->
+				
 				<img id ="endimg" src="http://www.nyenvironmentreport.com/wp-content/uploads/2014/05/NYER5514_2-762x478.jpg"/>
 			<footer class="footer">
       			<div class="container">
@@ -114,6 +96,23 @@
 			$("#begin").click( function() {
 				showPage("#past");
 			})
+
+			clickBack("#home", "#pasttitle");
+			clickBack("#pasttitle", "#past");
+			clickBack("#past", "#prestitle")
+			clickBack("#prestitle", "#present");
+			clickBack("#present", "#choice")
+			clickBack("#gftitle", "#goodfuture")
+			clickBack("#bftitle", "#badfuture")
+			clickBack("#goodfuture", "#end")
+
+			function clickBack(fpage, page){
+				$(fpage).click(function() {
+				showPage($(page))
+				})
+				console.log(page)
+			}
+			
 			function showPage(page){
 				//List hide thing
 				for(var i = 0; i < pages.length; i++)
